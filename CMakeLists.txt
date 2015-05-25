@@ -1,4 +1,9 @@
 cmake_minimum_required (VERSION 2.6)
- 
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /EHsc")
+set(CMAKE_CXX_FLAGS_RELEASE "/MT")
+set(CMAKE_CXX_FLAGS_DEBUG "/MTd")
+
+add_subdirectory(gtest-1.7.0)
 add_subdirectory(utility)
+add_subdirectory(utility_test)
 add_subdirectory(JBTest)
