@@ -7,7 +7,7 @@ using namespace utility;
 
 //------------------------------------------------------------------------------------------
 
-TEST(utility_test, utility_test)
+TEST(StrConvertTest, StrToWStr)
 {
 	std::string str1;
 	str1 << L"WStr1";
@@ -16,7 +16,10 @@ TEST(utility_test, utility_test)
 	std::string str2;
 	L"WStr2" >> str2;
 	ASSERT_STREQ(str2.c_str(), "WStr2");
+}
 
+TEST(StrConvertTest, WStrToStr)
+{
 	std::string	str3;
 	std::wstring wstr1;
 	wstr1 << "Str1";
