@@ -1,3 +1,6 @@
+#ifndef __UTILITY_STRCONVERT_H
+#define __UTILITY_STRCONVERT_H
+
 #include <string>
 #include <sstream>
 namespace utility
@@ -14,3 +17,5 @@ namespace utility
 	// std::string >> std::wstring
 	bool operator >> (const std::string& strIn, std::wstring& wcharOut);
 };
+
+#endif // __UTILITY_STRCONVERT_H
