@@ -12,12 +12,16 @@
 TEST(FibonacciTest, Recursive)
 {
 	using namespace utility::recursive;
-	EXPECT_EQ(Fibonacci(40), 102334155);
+	EXPECT_EQ(Fibonacci(10), 55);
+	EXPECT_EQ(Fibonacci(20), 6765);
+	//EXPECT_EQ(Fibonacci(40), 102334155);
 }
 
 // The test case of iterative Fibonacci
 TEST(FibonacciTest, Iterative)
 {
 	using namespace utility::iterative;
-	EXPECT_EQ(Fibonacci(40), 102334155);
+	EXPECT_EQ(Fibonacci(10), 55);
+	EXPECT_EQ(Fibonacci(20), 6765);
+	//EXPECT_EQ(Fibonacci(40), 102334155);
 }
