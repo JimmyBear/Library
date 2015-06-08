@@ -70,7 +70,13 @@ namespace utility
 			return EMPTY;
 
 		int iResult = m_pstHead->iData;
+		Node* pstNode = m_pstHead;
 		m_pstHead = m_pstHead->pstNext;
+
+		// free the node
+		pstNode->pstNext = NULL;
+		delete pstNode;
+
 		return iResult;
 	}
 
@@ -101,7 +107,13 @@ namespace utility
 			return EMPTY;
 
 		int iResult = m_pstHead->iData;
+		Node* pstNode = m_pstHead;
 		m_pstHead = m_pstHead->pstNext;
+
+		// free the node
+		pstNode->pstNext = NULL;
+		delete pstNode;
+
 		return iResult;
 	}
 };
