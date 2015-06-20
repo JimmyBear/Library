@@ -11,7 +11,7 @@ include_directories(${CMAKE_SOURCE_DIR}/network)
 # Unit Tests
 ################################
 # Add test cpp file
-add_executable(network_test testIPEndPoint.cpp)
+add_executable(network_test testIPEndPoint.cpp testSocket.cpp)
 # Link test executable against gtest & gtest_main
 target_link_libraries(network_test gtest gtest_main)
 target_link_libraries(network_test network)
