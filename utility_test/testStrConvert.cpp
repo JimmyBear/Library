@@ -11,22 +11,22 @@ using namespace utility;
 TEST(StrConvertTest, StrToWStr)
 {
 	std::string str1;
-	str1 << L"WStr1";
-	EXPECT_STREQ(str1.c_str(), "WStr1");
-
-	std::string str2;
-	L"WStr2" >> str2;
-	EXPECT_STREQ(str2.c_str(), "WStr2");
+	str1 << L"WStr";
+	EXPECT_STREQ(str1.c_str(), "WStr");
 }
 
 // The test case of converting string to wide string
 TEST(StrConvertTest, WStrToStr)
 {
 	std::wstring wstr1;
-	wstr1 << "Str1";
-	EXPECT_STREQ(wstr1.c_str(), L"Str1");
+	wstr1 << "Str";
+	EXPECT_STREQ(wstr1.c_str(), L"Str");
+}
 
-	std::wstring wstr2;
-	"Str2" >> wstr2;
-	EXPECT_STREQ(wstr2.c_str(), L"Str2");
+// The test case of converting int to string
+TEST(StrConvertTest, IntToStr)
+{
+	std::string str1;
+	str1 << -100;
+	EXPECT_STREQ(str1.c_str(), "-100");
 }
