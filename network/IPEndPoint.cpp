@@ -3,7 +3,7 @@
 namespace network
 {
 	IPEndPoint::IPEndPoint() :
-		m_uBinary(0),
+		m_nBinary(0),
 		m_u16Family(0),
 		m_u16Port(0)
 	{
@@ -18,8 +18,14 @@ namespace network
 
 	void IPEndPoint::SetAddress(const char* szSockAddr)
 	{
-		m_uBinary = inet_addr(szSockAddr);
+		m_nBinary = ntohl(inet_addr(szSockAddr));
 	}
+
+	void IPEndPoint::SetBinary(unsigned int nBinary)
+	{
+		m_nBinary = nBinary;
+	}
+
 	void IPEndPoint::SetPort(unsigned short u16Port)
 	{
 		m_u16Port = u16Port;
@@ -27,7 +33,12 @@ namespace network
 
 	unsigned int IPEndPoint::GetBinary()
 	{
-		return m_uBinary;
+		return m_nBinary;
+	}
+
+	unsigned short IPEndPoint::GetFamily()
+	{
+		return m_u16Family;
 	}
 
 	unsigned short IPEndPoint::GetPort()

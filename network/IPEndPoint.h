@@ -14,12 +14,14 @@ namespace network
 		IPEndPoint(const char* szSockAddr, unsigned short u16Port);
 
 		void SetAddress(const char* szSockAddr);
+		void SetBinary(unsigned int nBinary);
 		void SetPort(unsigned short u16Port);
 
 		unsigned int	GetBinary();
+		unsigned short	GetFamily();
 		unsigned short	GetPort();
 	private:
-		unsigned int	m_uBinary;
+		unsigned int	m_nBinary;
 		unsigned short	m_u16Family;
 		unsigned short	m_u16Port;
 	};
